@@ -77,7 +77,7 @@ class _DayNightTimePickerIosState extends State<DayNightTimePickerIos> {
           })
           ..addListener(() {
             _hourController!.position.isScrollingNotifier.addListener(() {
-              WidgetsBinding.instance!.addPostFrameCallback((_) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (timeState!.widget.isOnValueChangeMode &&
                     !_hourController!.position.isScrollingNotifier.value) {
                   timeState!.onOk();
@@ -88,7 +88,7 @@ class _DayNightTimePickerIosState extends State<DayNightTimePickerIos> {
     _minuteController =
         FixedExtentScrollController(initialItem: _minutes.indexOf(m))
           ..addListener(() {
-            WidgetsBinding.instance!.addPostFrameCallback((_) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
               if (mounted) {
                 timeState!.onHourIsSelectedChange(false);
                 setState(() {
@@ -100,7 +100,7 @@ class _DayNightTimePickerIosState extends State<DayNightTimePickerIos> {
           })
           ..addListener(() {
             _minuteController!.position.isScrollingNotifier.addListener(() {
-              WidgetsBinding.instance!.addPostFrameCallback((_) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
                 if (timeState!.widget.isOnValueChangeMode &&
                     !_minuteController!.position.isScrollingNotifier.value) {
                   timeState!.onOk();
